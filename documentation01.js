@@ -22,24 +22,24 @@ dibiarkan tetap
 // step 2 = "arp" |"t"|"ama"
 // step 3 = "arptama"
 
-// function change(text) {
-//     let complete = '';
-//     let middle = '';
-//     console.log(text)
-//     if (text.length % 2 === 1) {
-//        middle = (text.length - 1) / 2;
-//        console.log(text[middle])
-//        for (let i = middle - 1;i>=0;i--) complete += text[i];
-//     } else {
-//         middle = (text.length / 2) - 1;
-//         console.log(text[middle]);
-//         for (let i = middle;i>=0;i--) complete += text[i]
-//     }
-//     for (let i = middle + 1;i<text.length;i++) complete += text[i];
-//     console.log(complete)
-// }
+function change(text) {
+    let complete = '';
+    let middle = '';
+    console.log(text)
+    if (text.length % 2 === 1) {
+       middle = (text.length - 1) / 2;
+       console.log(text[middle])
+       for (let i = middle - 1;i>=0;i--) complete += text[i];
+    } else {
+        middle = (text.length / 2) - 1;
+        console.log(text[middle]);
+        for (let i = middle;i>=0;i--) complete += text[i]
+    }
+    for (let i = middle + 1;i<text.length;i++) complete += text[i];
+    console.log(complete)
+}
 
-// change('ihsan') 
+change('yusril') 
 
 // ===============================================================================================
 
@@ -59,31 +59,31 @@ step 2 : vFvSTvpRvTvMv
 step 3 : vMvTvRpvTSvFv
 */
 
-// function generatePassword(pass){
+function generatePassword(pass){
 
-//     function cekVokal(string){
-//         let vokal = ["a", "i", "u", "e", "o"]
-//         let str = string.toLowerCase()
-//         for(let i = 0 ; i < vokal.length;i++){
-//             if(str === vokal[i] ){
-//                 return "v"
-//             }
-//         }
-//         return string
-//     }
+    function cekVokal(string){
+        let vokal = ["a", "i", "u", "e", "o"]
+        let str = string.toLowerCase()
+        for(let i = 0 ; i < vokal.length;i++){
+            if(str === vokal[i] ){
+                return "v"
+            }
+        }
+        return string
+    }
 
-//     let result = "";
-//     for(let i = pass.length - 1 ; i>= 0; i-- ){
-//         if(pass[i]===pass[i].toUpperCase()){
-//             result += cekVokal(pass[i].toLowerCase())
-//         }else{
-//             result += cekVokal(pass[i].toUpperCase())
-//         }
-//     }
-//     console.log(result)
-// }
+    let result = "";
+    for(let i = pass.length - 1 ; i>= 0; i-- ){
+        if(pass[i]===pass[i].toUpperCase()){
+            result += cekVokal(pass[i].toLowerCase())
+        }else{
+            result += cekVokal(pass[i].toUpperCase())
+        }
+    }
+    console.log(result)
+}
 
-// generatePassword("AfistaPratama")
+generatePassword("AfistaPratama")
 
 //==============================================================================
 
@@ -92,31 +92,31 @@ buatlah sebuah fungsi untuk menampilkan domain dari sebuah email emnggunakan sin
 */
 ​
 ​
-// function getDomain(email) {
+function getDomain(email) {
    
-//     let hasil = "" 
-//     let kondisi = false
+    let hasil = "" 
+    let kondisi = false
     
-//    for( let i = 0 ; i < email.length; i++){
-//        if(email[i] === '@'){
-//            kondisi = true 
-//            continue
-//        }else if(email[i]==="."){
-//            break 
-//        }
+   for( let i = 0 ; i < email.length; i++){
+       if(email[i] === '@'){
+           kondisi = true 
+           continue
+       }else if(email[i]==="."){
+           break 
+       }
 
-//        if(kondisi){
-//         hasil += email[i]
-//        }
-//    }
+       if(kondisi){
+        hasil += email[i]
+       }
+   }
 
-//    return hasil
-// }
+   return hasil
+}
 
-// console.log(getDomain("dedy@gmail.com")) // gmail
-// console.log(getDomain("eddy@yahoo.com")) // yahoo
-// console.log(getDomain("eddy@workspace.com")) // workspace
-// console.log(getDomain("eddy@impactbyte.com")) // impactbyte
+console.log(getDomain("dedy@gmail.com"))
+console.log(getDomain("eddy@yahoo.com"))
+console.log(getDomain("eddy@workspace.com"))
+console.log(getDomain("eddy@impactbyte.com"))
 ​
 
 //===============================================================================
